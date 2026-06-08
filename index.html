@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-deep: #fcfbfa;
+  --bg-deep: #f9f6f0;
   --bg-card: #ffffff;
-  --bg-elevated: #f7f5f2;
-  --gold: #b89355;
-  --gold-light: #d4b785;
-  --gold-dim: #917343;
-  --cream: #1a1917;
-  --cream-dim: #3d3a36;
-  --text-body: #615e5a;
-  --border: rgba(184,147,85,0.25);
-  --border-subtle: rgba(0,0,0,0.06);
+  --bg-elevated: #f3eee3;
+  --gold: #bd9a5f;
+  --gold-light: #dfc8a2;
+  --gold-dim: #947544;
+  --cream: #2c2925;
+  --cream-dim: #4a453f;
+  --text-body: #6e675f;
+  --border: rgba(189,154,95,0.2);
+  --border-subtle: rgba(0,0,0,0.04);
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Montserrat', sans-serif;
   --radius: 4px;
@@ -68,7 +68,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 5vw;
-  background: rgba(252, 251, 250, 0.92);
+  background: rgba(249, 246, 240, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
@@ -77,8 +77,8 @@ nav {
 
 nav.scrolled {
   padding: 0.9rem 5vw;
-  background: rgba(252, 251, 250, 0.98);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  background: rgba(249, 246, 240, 0.98);
+  box-shadow: 0 4px 20px rgba(74,69,63,0.04);
 }
 
 .nav-logo {
@@ -133,7 +133,7 @@ nav.scrolled {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 20% 50%, rgba(184,147,85,0.06) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 20% 50%, rgba(189,154,95,0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -157,7 +157,7 @@ nav.scrolled {
   gap: 0.5rem;
   padding: 0.45rem 1rem;
   border: 1px solid var(--border);
-  background: rgba(184,147,85,0.05);
+  background: rgba(189,154,95,0.04);
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -219,7 +219,7 @@ nav.scrolled {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(184,147,85,0.25);
+  box-shadow: 0 12px 30px rgba(189,154,95,0.2);
 }
 
 .btn-secondary {
@@ -263,14 +263,14 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(110,103,95,0.06);
 }
 
 .hero-image-wrap::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(252,251,250,0.1) 0%, transparent 50%);
+  background: linear-gradient(135deg, rgba(249,246,240,0.15) 0%, transparent 60%);
   z-index: 1;
   pointer-events: none;
 }
@@ -297,14 +297,14 @@ nav.scrolled {
 
 @keyframes floatZoom {
   0%, 100% { transform: scale(1.05) translateY(0px); }
-  33% { transform: scale(1.08) translateY(-8px); }
-  66% { transform: scale(1.04) translateY(6px); }
+  33% { transform: scale(1.08) translateY(-6px); }
+  66% { transform: scale(1.03) translateY(4px); }
 }
 
 .hero-frame {
   position: absolute;
   inset: 16px;
-  border: 1px solid rgba(184,147,85,0.3);
+  border: 1px solid rgba(189,154,95,0.25);
   z-index: 3;
   pointer-events: none;
 }
@@ -478,7 +478,7 @@ nav.scrolled {
 .service-card:hover {
   background: var(--bg-deep);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(184,147,85,0.08);
+  box-shadow: 0 12px 30px rgba(189,154,95,0.08);
 }
 
 .service-icon {
@@ -490,7 +490,7 @@ nav.scrolled {
   justify-content: center;
   font-size: 1.1rem;
   color: var(--gold);
-  background: rgba(184,147,85,0.03);
+  background: rgba(189,154,95,0.03);
 }
 
 .service-number {
@@ -619,7 +619,7 @@ nav.scrolled {
 
 .contact-phone-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(184,147,85,0.25);
+  box-shadow: 0 12px 30px rgba(189,154,95,0.25);
 }
 
 .contact-form {
@@ -689,15 +689,15 @@ nav.scrolled {
 .field-select:focus {
   border-color: var(--gold);
   background: var(--bg-card);
-  box-shadow: 0 0 10px rgba(184,147,85,0.05);
+  box-shadow: 0 0 10px rgba(189,154,95,0.05);
 }
 
 .field-input::placeholder {
-  color: #b0aba5;
+  color: #bfaea1;
 }
 
 .field-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23917343' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23947544' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 2.5rem;
@@ -745,7 +745,7 @@ nav.scrolled {
 .success-msg {
   display: none;
   padding: 1.2rem 1.5rem;
-  background: rgba(184,147,85,0.08);
+  background: rgba(189,154,95,0.08);
   border: 1px solid var(--gold);
   color: var(--gold-dim);
   font-size: 0.85rem;
@@ -901,8 +901,8 @@ footer {
       <div class="hero-image-wrap">
         <img
           class="hero-img"
-          src="https://d8j0ntlcm91z4.cloudfront.net/user_3Erij4BdmViVM2FP8PqECfY4uJK/hf_20260608_183736_08030957-9128-4630-b1ee-20c18065a3f8.png"
-          alt="Soin du visage haut de gamme – Instant de Sérénité"
+          src="https://www.natureaspa-gramat.fr/produit/massage-zen-de-la-tete-20-min/"
+          alt="Massage zen de la tête – Instant de Sérénité"
           loading="eager"
         >
       </div>
