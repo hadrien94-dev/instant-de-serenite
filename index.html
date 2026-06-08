@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-deep: #0b0a0a;
-  --bg-card: #111010;
-  --bg-elevated: #161414;
-  --gold: #c9a96e;
-  --gold-light: #e2c48a;
-  --gold-dim: #8b7355;
-  --cream: #f5f0e8;
-  --cream-dim: #bfb8ac;
-  --text-body: #9a9490;
-  --border: rgba(201,169,110,0.15);
-  --border-subtle: rgba(255,255,255,0.06);
+  --bg-deep: #fcfbfa;
+  --bg-card: #ffffff;
+  --bg-elevated: #f7f5f2;
+  --gold: #b89355;
+  --gold-light: #d4b785;
+  --gold-dim: #917343;
+  --cream: #1a1917;
+  --cream-dim: #3d3a36;
+  --text-body: #615e5a;
+  --border: rgba(184,147,85,0.25);
+  --border-subtle: rgba(0,0,0,0.06);
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Montserrat', sans-serif;
   --radius: 4px;
@@ -50,7 +50,7 @@ body {
 
 ::selection {
   background: var(--gold);
-  color: var(--bg-deep);
+  color: #ffffff;
 }
 
 a {
@@ -68,7 +68,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 5vw;
-  background: rgba(11,10,10,0.92);
+  background: rgba(252, 251, 250, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
@@ -77,7 +77,8 @@ nav {
 
 nav.scrolled {
   padding: 0.9rem 5vw;
-  background: rgba(11,10,10,0.98);
+  background: rgba(252, 251, 250, 0.98);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
 }
 
 .nav-logo {
@@ -99,8 +100,8 @@ nav.scrolled {
   gap: 0.5rem;
   padding: 0.65rem 1.4rem;
   background: transparent;
-  border: 1px solid var(--gold-dim);
-  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  color: var(--gold-dim);
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 500;
@@ -114,7 +115,7 @@ nav.scrolled {
 .nav-cta:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--bg-deep);
+  color: #ffffff;
 }
 
 .hero {
@@ -132,7 +133,7 @@ nav.scrolled {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 20% 50%, rgba(201,169,110,0.04) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 20% 50%, rgba(184,147,85,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -156,7 +157,7 @@ nav.scrolled {
   gap: 0.5rem;
   padding: 0.45rem 1rem;
   border: 1px solid var(--border);
-  background: rgba(201,169,110,0.05);
+  background: rgba(184,147,85,0.05);
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -205,7 +206,7 @@ nav.scrolled {
   gap: 0.6rem;
   padding: 0.9rem 2rem;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  color: var(--bg-deep);
+  color: #ffffff;
   font-family: var(--font-sans);
   font-size: 0.8rem;
   font-weight: 600;
@@ -218,7 +219,7 @@ nav.scrolled {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(201,169,110,0.3);
+  box-shadow: 0 12px 30px rgba(184,147,85,0.25);
 }
 
 .btn-secondary {
@@ -240,7 +241,7 @@ nav.scrolled {
 
 .btn-secondary:hover {
   border-color: var(--gold-dim);
-  color: var(--gold-light);
+  color: var(--gold-dim);
 }
 
 .hero-right {
@@ -262,13 +263,14 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
 .hero-image-wrap::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(11,10,10,0.3) 0%, transparent 50%, rgba(11,10,10,0.2) 100%);
+  background: linear-gradient(135deg, rgba(252,251,250,0.1) 0%, transparent 50%);
   z-index: 1;
   pointer-events: none;
 }
@@ -302,7 +304,7 @@ nav.scrolled {
 .hero-frame {
   position: absolute;
   inset: 16px;
-  border: 1px solid rgba(201,169,110,0.2);
+  border: 1px solid rgba(184,147,85,0.3);
   z-index: 3;
   pointer-events: none;
 }
@@ -366,6 +368,8 @@ nav.scrolled {
 
 .review-card:hover {
   border-color: var(--border);
+  background: var(--bg-card);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
 }
 
 .review-card::before {
@@ -376,7 +380,7 @@ nav.scrolled {
   font-family: var(--font-serif);
   font-size: 4rem;
   color: var(--gold);
-  opacity: 0.3;
+  opacity: 0.25;
   line-height: 1;
 }
 
@@ -419,7 +423,7 @@ nav.scrolled {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-dim);
   margin-bottom: 1rem;
 }
 
@@ -439,8 +443,7 @@ nav.scrolled {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5px;
-  background: var(--border-subtle);
+  gap: 20px;
 }
 
 .service-card {
@@ -452,6 +455,8 @@ nav.scrolled {
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.01);
 }
 
 .service-card::after {
@@ -471,7 +476,9 @@ nav.scrolled {
 }
 
 .service-card:hover {
-  background: var(--bg-elevated);
+  background: var(--bg-deep);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(184,147,85,0.08);
 }
 
 .service-icon {
@@ -482,6 +489,8 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+  color: var(--gold);
+  background: rgba(184,147,85,0.03);
 }
 
 .service-number {
@@ -515,6 +524,7 @@ nav.scrolled {
   color: var(--gold-dim);
   margin-top: auto;
   transition: var(--transition);
+  font-weight: 500;
 }
 
 .service-link:hover {
@@ -547,7 +557,7 @@ nav.scrolled {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-dim);
   margin-bottom: 0.3rem;
 }
 
@@ -576,6 +586,7 @@ nav.scrolled {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-dim);
+  font-weight: 500;
 }
 
 .detail-value {
@@ -597,23 +608,27 @@ nav.scrolled {
   margin-top: 1rem;
   padding: 1rem 1.8rem;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-  color: var(--bg-deep);
+  color: #ffffff;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: var(--transition);
+  width: fit-content;
 }
 
 .contact-phone-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(201,169,110,0.3);
+  box-shadow: 0 12px 30px rgba(184,147,85,0.25);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  background: var(--bg-deep);
+  padding: 2.5rem;
+  border: 1px solid var(--border-subtle);
 }
 
 .form-header {
@@ -650,37 +665,39 @@ nav.scrolled {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold-dim);
+  font-weight: 500;
 }
 
 .field-input,
 .field-select {
   padding: 0.85rem 1.1rem;
-  background: var(--bg-deep);
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   color: var(--cream-dim);
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 400;
   outline: none;
   transition: var(--transition);
   appearance: none;
   -webkit-appearance: none;
   width: 100%;
+  border-radius: 0;
 }
 
 .field-input:focus,
 .field-select:focus {
-  border-color: var(--gold-dim);
-  background: var(--bg-elevated);
+  border-color: var(--gold);
+  background: var(--bg-card);
+  box-shadow: 0 0 10px rgba(184,147,85,0.05);
 }
 
 .field-input::placeholder {
-  color: var(--text-body);
-  opacity: 0.6;
+  color: #b0aba5;
 }
 
 .field-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b7355' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23917343' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 2.5rem;
@@ -688,18 +705,18 @@ nav.scrolled {
 }
 
 .field-select option {
-  background: var(--bg-deep);
+  background: var(--bg-card);
   color: var(--cream-dim);
 }
 
 .form-submit {
   padding: 1rem 2rem;
   background: transparent;
-  border: 1px solid var(--gold-dim);
-  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  color: var(--gold-dim);
   font-family: var(--font-sans);
   font-size: 0.78rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
@@ -708,12 +725,13 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
+  width: 100%;
 }
 
 .form-submit:hover {
   background: var(--gold);
   border-color: var(--gold);
-  color: var(--bg-deep);
+  color: #ffffff;
 }
 
 .form-note {
@@ -727,16 +745,18 @@ nav.scrolled {
 .success-msg {
   display: none;
   padding: 1.2rem 1.5rem;
-  background: rgba(201,169,110,0.08);
-  border: 1px solid var(--gold-dim);
-  color: var(--gold-light);
+  background: rgba(184,147,85,0.08);
+  border: 1px solid var(--gold);
+  color: var(--gold-dim);
   font-size: 0.85rem;
   text-align: center;
+  font-weight: 500;
 }
 
 footer {
   padding: 2.5rem 5vw;
   border-top: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -747,7 +767,7 @@ footer {
 .footer-left {
   font-size: 0.72rem;
   color: var(--text-body);
-  opacity: 0.7;
+  opacity: 0.8;
   letter-spacing: 0.04em;
 }
 
@@ -755,12 +775,13 @@ footer {
   font-family: var(--font-serif);
   font-size: 0.85rem;
   color: var(--gold-dim);
+  font-weight: 500;
 }
 
 .footer-right {
   font-size: 0.72rem;
   color: var(--text-body);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .footer-right a {
@@ -791,11 +812,16 @@ footer {
 
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .contact-inner {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
   }
 }
 
@@ -821,7 +847,7 @@ footer {
     flex-direction: column;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-secondary, .contact-phone-link {
     width: 100%;
     justify-content: center;
   }
@@ -853,167 +879,169 @@ footer {
   <a href="tel:0148859607" class="nav-cta">Prendre RDV&nbsp;: 01&nbsp;48&nbsp;85&nbsp;96&nbsp;07</a>
 </nav>
 
-<section class="hero" id="accueil">
-  <div class="hero-left">
-    <div class="hero-badge">✨ Votre Institut de Beauté Privé&nbsp;· Nogent-sur-Marne</div>
-    <h1 class="hero-title">Un instant absolu<br><span class="accent">de sérénité</span></h1>
-    <div class="hero-divider"></div>
-    <p class="hero-subtitle">Soins du visage sur-mesure, épilations méticuleuses et rituels de bien-être dans un cadre chaleureux et confidentiel.</p>
-    <div class="hero-actions">
-      <a href="tel:0148859607" class="btn-primary">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.86 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        Appeler l'Institut
-      </a>
-      <a href="#prestations" class="btn-secondary">
-        Découvrir la carte des soins
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+<main>
+  <section class="hero" id="accueil">
+    <div class="hero-left">
+      <div class="hero-badge">✨ Votre Institut de Beauté Privé&nbsp;· Nogent-sur-Marne</div>
+      <h1 class="hero-title">Un instant absolu<br><span class="accent">de sérénité</span></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle">Soins du visage sur-mesure, épilations méticuleuses et rituels de bien-être dans un cadre chaleureux et confidentiel.</p>
+      <div class="hero-actions">
+        <a href="tel:0148859607" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.86 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          Appeler l'Institut
+        </a>
+        <a href="#prestations" class="btn-secondary">
+          Découvrir la carte des soins
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-image-wrap">
-      <img
-        class="hero-img"
-        src="https://d8j0ntlcm91z4.cloudfront.net/user_3Erij4BdmViVM2FP8PqECfY4uJK/hf_20260608_183736_08030957-9128-4630-b1ee-20c18065a3f8.png"
-        alt="Soin du visage haut de gamme – Instant de Sérénité"
-        loading="eager"
-      >
+    <div class="hero-right">
+      <div class="hero-image-wrap">
+        <img
+          class="hero-img"
+          src="https://d8j0ntlcm91z4.cloudfront.net/user_3Erij4BdmViVM2FP8PqECfY4uJK/hf_20260608_183736_08030957-9128-4630-b1ee-20c18065a3f8.png"
+          alt="Soin du visage haut de gamme – Instant de Sérénité"
+          loading="eager"
+        >
+      </div>
+      <div class="hero-frame"></div>
     </div>
-    <div class="hero-frame"></div>
-  </div>
-</section>
+  </section>
 
-<section class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-rating">
-      <div class="trust-stars">★ ★ ★ ★ ★</div>
-      <div class="trust-score">5.0<span style="font-size:1rem;color:var(--gold-dim)">/5</span></div>
-      <div class="trust-label">Basé sur 30 avis certifiés<br>Google Maps · Nogent-sur-Marne</div>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★ ★ ★ ★ ★</div>
-        <p class="review-text">Soin du visage fait avec beaucoup de délicatesse… travail de qualité, l'institut est très chaleureux.</p>
-        <span class="review-author">— Alexandra M.</span>
+  <section class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-rating">
+        <div class="trust-stars">★ ★ ★ ★ ★</div>
+        <div class="trust-score">5.0<span style="font-size:1rem;color:var(--gold-dim)">/5</span></div>
+        <h2 class="trust-label">Basé sur 30 avis certifiés<br>Google Maps · Nogent-sur-Marne</h2>
       </div>
-      <div class="review-card">
-        <div class="review-stars">★ ★ ★ ★ ★</div>
-        <p class="review-text">Salon très propre et agréable. Une esthéticienne très douce et méticuleuse. Je recommande à 100&nbsp;%.</p>
-        <span class="review-author">— Océane P.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="services" id="prestations">
-  <div class="section-header">
-    <div class="section-tag">Nos Prestations</div>
-    <h2 class="section-title">Des soins d'exception,<br><em>une attention absolue</em></h2>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div style="display:flex;align-items:center;justify-content:space-between;">
-        <div class="service-icon">✦</div>
-        <span class="service-number">01</span>
-      </div>
-      <div>
-        <h3 class="service-name">Soins du Visage</h3>
-      </div>
-      <p class="service-desc">Rituels sur-mesure et diagnostics de peau profonds exécutés avec délicatesse, pour révéler l'éclat naturel de votre peau.</p>
-      <a href="tel:0148859607" class="service-link">Réserver ce soin →</a>
-    </div>
-    <div class="service-card">
-      <div style="display:flex;align-items:center;justify-content:space-between;">
-        <div class="service-icon">◈</div>
-        <span class="service-number">02</span>
-      </div>
-      <div>
-        <h3 class="service-name">Épilations Méticuleuses</h3>
-      </div>
-      <p class="service-desc">Une technique douce et précise pour un résultat impeccable et durable, dans un cadre confidentiel et bienveillant.</p>
-      <a href="tel:0148859607" class="service-link">Réserver ce soin →</a>
-    </div>
-    <div class="service-card">
-      <div style="display:flex;align-items:center;justify-content:space-between;">
-        <div class="service-icon">❧</div>
-        <span class="service-number">03</span>
-      </div>
-      <div>
-        <h3 class="service-name">Massages & Détente</h3>
-      </div>
-      <p class="service-desc">Parenthèse de bien-être absolu pour libérer les tensions du corps et de l'esprit, et vous ressourcer en profondeur.</p>
-      <a href="tel:0148859607" class="service-link">Réserver ce soin →</a>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <div class="contact-info">
-      <div>
-        <div class="contact-label">Nous trouver</div>
-        <h2 class="contact-title">L'Institut</h2>
-      </div>
-      <div class="contact-detail-group">
-        <div class="contact-detail">
-          <span class="detail-label">Adresse</span>
-          <span class="detail-value">3 Rue André Pontier<br>94130 Nogent-sur-Marne</span>
-          <span class="detail-sub">À deux pas du centre-ville · Stationnement facile</span>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">Soin du visage fait avec beaucoup de délicatesse… travail de qualité, l'institut est très chaleureux.</p>
+          <span class="review-author">— Alexandra M.</span>
         </div>
-        <div class="contact-detail">
-          <span class="detail-label">Horaires</span>
-          <span class="detail-value">Ouvert du mardi au samedi<br>dès 10:00</span>
-        </div>
-        <div class="contact-detail">
-          <span class="detail-label">Téléphone</span>
-          <span class="detail-value">01 48 85 96 07</span>
+        <div class="review-card">
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">Salon très propre et agréable. Une esthéticienne très douce et méticuleuse. Je recommande à 100&nbsp;%.</p>
+          <span class="review-author">— Océane P.</span>
         </div>
       </div>
-      <a href="tel:0148859607" class="contact-phone-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.86 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        Appeler maintenant · 01 48 85 96 07
-      </a>
     </div>
+  </section>
 
-    <div class="contact-form">
-      <div class="form-header">
-        <h3 class="form-title">Demande de rappel sous 2h</h3>
-        <p class="form-subtitle">Laissez vos coordonnées, nous vous recontactons rapidement.</p>
+  <section class="services" id="prestations">
+    <div class="section-header">
+      <div class="section-tag">Nos Prestations</div>
+      <h2 class="section-title">Des soins d'exception,<br><em>une attention absolue</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="service-icon">✦</div>
+          <span class="service-number">01</span>
+        </div>
+        <div>
+          <h3 class="service-name">Soins du Visage</h3>
+        </div>
+        <p class="service-desc">Rituels sur-mesure et diagnostics de peau profonds exécutés avec délicatesse, pour révéler l'éclat naturel de votre peau.</p>
+        <a href="tel:0148859607" class="service-link">Réserver ce soin →</a>
       </div>
-      <div class="form-row">
+      <div class="service-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="service-icon">◈</div>
+          <span class="service-number">02</span>
+        </div>
+        <div>
+          <h3 class="service-name">Épilations Méticuleuses</h3>
+        </div>
+        <p class="service-desc">Une technique douce et précise pour un résultat impeccable et durable, dans un cadre confidentiel et bienveillant.</p>
+        <a href="tel:0148859607" class="service-link">Réserver ce soin →</a>
+      </div>
+      <div class="service-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <div class="service-icon">❧</div>
+          <span class="service-number">03</span>
+        </div>
+        <div>
+          <h3 class="service-name">Massages & Détente</h3>
+        </div>
+        <p class="service-desc">Parenthèse de bien-être absolu pour libérer les tensions du corps et de l'esprit, et vous ressourcer en profondeur.</p>
+        <a href="tel:0148859607" class="service-link">Réserver ce soin →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div>
+          <div class="contact-label">Nous trouver</div>
+          <h2 class="contact-title">L'Institut</h2>
+        </div>
+        <div class="contact-detail-group">
+          <div class="contact-detail">
+            <span class="detail-label">Adresse</span>
+            <span class="detail-value">3 Rue André Pontier<br>94130 Nogent-sur-Marne</span>
+            <span class="detail-sub">À deux pas du centre-ville · Stationnement facile</span>
+          </div>
+          <div class="contact-detail">
+            <span class="detail-label">Horaires</span>
+            <span class="detail-value">Ouvert du mardi au samedi<br>dès 10:00</span>
+          </div>
+          <div class="contact-detail">
+            <span class="detail-label">Téléphone</span>
+            <span class="detail-value">01 48 85 96 07</span>
+          </div>
+        </div>
+        <a href="tel:0148859607" class="contact-phone-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.86 19.79 19.79 0 01.12 1.22 2 2 0 012.1 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          Appeler maintenant · 01 48 85 96 07
+        </a>
+      </div>
+
+      <form class="contact-form" id="recallForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-header">
+          <h3 class="form-title">Demande de rappel sous 2h</h3>
+          <p class="form-subtitle">Laissez vos coordonnées, nous vous recontactons rapidement.</p>
+        </div>
+        <div class="form-row">
+          <div class="field-wrap">
+            <label class="field-label" for="nom">Prénom & Nom</label>
+            <input class="field-input" type="text" id="nom" name="nom" placeholder="Marie Dupont" required>
+          </div>
+          <div class="field-wrap">
+            <label class="field-label" for="tel">Téléphone</label>
+            <input class="field-input" type="tel" id="tel" name="tel" placeholder="06 00 00 00 00" required>
+          </div>
+        </div>
         <div class="field-wrap">
-          <label class="field-label" for="nom">Prénom & Nom</label>
-          <input class="field-input" type="text" id="nom" name="nom" placeholder="Marie Dupont" required>
+          <label class="field-label" for="prestation">Prestation souhaitée</label>
+          <select class="field-select" id="prestation" name="prestation" required>
+            <option value="" disabled selected>Choisir une prestation…</option>
+            <option value="visage">Soin du visage</option>
+            <option value="epilation">Épilation</option>
+            <option value="massage">Massage & Détente</option>
+            <option value="autre">Autre / À définir</option>
+          </select>
         </div>
-        <div class="field-wrap">
-          <label class="field-label" for="tel">Téléphone</label>
-          <input class="field-input" type="tel" id="tel" name="tel" placeholder="06 00 00 00 00" required>
+        <button type="submit" class="form-submit">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          Envoyer ma demande
+        </button>
+        <div class="success-msg" id="successMsg">
+          ✓ &nbsp;Votre demande a bien été envoyée. Nous vous rappelons sous 2h.
         </div>
-      </div>
-      <div class="field-wrap">
-        <label class="field-label" for="prestation">Prestation souhaitée</label>
-        <select class="field-select" id="prestation" name="prestation" required>
-          <option value="" disabled selected>Choisir une prestation…</option>
-          <option value="visage">Soin du visage</option>
-          <option value="epilation">Épilation</option>
-          <option value="massage">Massage & Détente</option>
-          <option value="autre">Autre / À définir</option>
-        </select>
-      </div>
-      <button type="button" class="form-submit" onclick="handleFormSubmit()">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
-        Envoyer ma demande
-      </button>
-      <div class="success-msg" id="successMsg">
-        ✓ &nbsp;Votre demande a bien été envoyée. Nous vous rappelons sous 2h.
-      </div>
-      <p class="form-note">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        Vos données restent strictement confidentielles.
-      </p>
+        <p class="form-note">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Vos données restent strictement confidentielles.
+        </p>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer>
   <span class="footer-left">© 2026 Instant de Sérénité · 3 Rue André Pontier, 94130 Nogent-sur-Marne</span>
@@ -1036,17 +1064,22 @@ footer {
   }, { passive: true });
 })();
 
-function handleFormSubmit() {
+function handleFormSubmit(event) {
+  event.preventDefault();
+  
   var nom = document.getElementById('nom').value.trim();
   var tel = document.getElementById('tel').value.trim();
   var prestation = document.getElementById('prestation').value;
+  
   if (!nom || !tel || !prestation) {
     alert('Merci de remplir tous les champs.');
     return;
   }
+  
   var btn = document.querySelector('.form-submit');
   btn.style.opacity = '0.5';
   btn.disabled = true;
+  
   setTimeout(function() {
     document.getElementById('successMsg').style.display = 'block';
     btn.style.display = 'none';
