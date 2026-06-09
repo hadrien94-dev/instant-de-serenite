@@ -1003,6 +1003,10 @@ footer {
       </div>
 
       <form class="contact-form" id="recallForm" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" name="access_key" value="d30faa67-b86f-4cb9-890b-c2167e1726ae">
+        <input type="hidden" name="subject" value="Nouveau message de Instant de Sérénité">
+        <input type="checkbox" name="botcheck" style="display:none;">
+
         <div class="form-header">
           <h3 class="form-title">Demande de rappel sous 2h</h3>
           <p class="form-subtitle">Laissez vos coordonnées, nous vous recontactons rapidement.</p>
@@ -1067,6 +1071,7 @@ footer {
 function handleFormSubmit(event) {
   event.preventDefault();
   
+  var form = document.getElementById('recallForm');
   var nom = document.getElementById('nom').value.trim();
   var tel = document.getElementById('tel').value.trim();
   var prestation = document.getElementById('prestation').value;
@@ -1077,13 +1082,32 @@ function handleFormSubmit(event) {
   }
   
   var btn = document.querySelector('.form-submit');
+  var originalBtnText = btn.innerHTML;
   btn.style.opacity = '0.5';
   btn.disabled = true;
-  
-  setTimeout(function() {
-    document.getElementById('successMsg').style.display = 'block';
-    btn.style.display = 'none';
-  }, 600);
+  btn.innerText = 'Envoi en cours...';
+
+  var formData = new FormData(form);
+
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
+  .then(function(response) {
+    if (response.ok) {
+      document.getElementById('successMsg').style.display = 'block';
+      btn.style.display = 'none';
+      form.reset();
+    } else {
+      alert("Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous appeler directement.");
+      btn.style.opacity = '1';
+      btn.disabled = false;
+      btn.innerHTML = originalBtnText;
+    }
+  })
+  .catch(function() {
+    alert("Erreur réseau. Merci de vérifier votre connexion ou de nous appeler directement.");
+    btn.style.opacity = '1';
+    btn.disabled = false;
+    btn.innerHTML = originalBtnText;
+  });
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
