@@ -1002,9 +1002,9 @@ footer {
         </a>
       </div>
 
-      <form class="contact-form" id="recallForm" onsubmit="handleFormSubmit(event)">
-        <input type="hidden" name="access_key" value="d30faa67-b86f-4cb9-890b-c2167e1726ae">
-        <input type="hidden" name="subject" value="Nouveau message de Instant de Sérénité">
+      <form class="contact-form" id="recallForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" name="access_key" value="ea3ffc68-de33-4f11-9a79-24b533d7d74f">
+        <input type="hidden" name="subject" value="Nouvelle demande de rappel — Instant de Sérénité Nogent">
         <input type="checkbox" name="botcheck" style="display:none;">
 
         <div class="form-header">
@@ -1091,7 +1091,10 @@ function handleFormSubmit(event) {
 
   fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData })
   .then(function(response) {
-    if (response.ok) {
+    return response.json();
+  })
+  .then(function(data) {
+    if (data.success) {
       document.getElementById('successMsg').style.display = 'block';
       btn.style.display = 'none';
       form.reset();
